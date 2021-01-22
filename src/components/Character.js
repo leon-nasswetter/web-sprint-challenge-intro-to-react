@@ -12,7 +12,8 @@ const Character = (props) => {
             return <StyledCharacter>
                         {char.name}
                         <StyledStats>
-                            Height: {char.height},
+                            Height: {char.height} |
+                            Mass: {char.mass} |
                             Born: {char.birth_year}
                         </StyledStats>
                     </StyledCharacter>})}
@@ -31,18 +32,25 @@ const StyledContainer = styled.div `
     flex-direction: column;
     margin: auto;
     background-color: #C3AF97;
-    
+    border-radius: 10%;
+    padding-bottom: 2%;
+    opacity: 0.8;
     
 `
 
 const StyledCharacter = styled.div `
-    border: 2px solid black;
     font-size: 1.2rem;
     padding: 2%;
+    font-weight: bold;
+    font-family: sans-serif;
     
 `
 
 const StyledStats = styled.div ` 
     font-size: 1rem;
-    border: 2px solid red;
+    font-weight: normal;
+    border-bottom: 2px dotted black;
+    padding-bottom: 2%;
+    padding-top: 1%;
+
 `
